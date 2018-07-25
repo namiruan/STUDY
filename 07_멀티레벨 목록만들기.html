@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>멀티레벨 목록만들기</title>
+</head>
+
+<body>
+	
+	<h1>멀티레벨 목록</h1>
+	<p> 목록안에 목록을 만드는 구조 </p>
+	<p> 주로 서브메뉴 구조를 만들 때 많이 사용 </p>
+	
+	<h2> 예제 </h2>
+	
+	<ul>
+		<li>1레벨
+			<ul>
+				<li>2레벨</li>
+				<li>2레벨</li>
+				<li>2레벨
+					<ul>
+						<li> 3레벨 </li>
+						<li> 3레벨 </li>
+						<li> 3레벨 </li>
+					</ul> <!-- 3레벨 -->
+				
+				</li>
+			</ul> <!-- 2레벨 -->
+		</li>
+		<li>1레벨</li>
+		<li>1레벨</li>
+		<li>1레벨</li>
+		<li>1레벨</li>
+	
+	
+	</ul> <!-- 1레벨 -->
+	
+	
+	<h3> 응용예제 </h3>
+	<h3> 내가 좋아하는 사이트 </h3>
+	<ul> 
+		<li> <a href="#"> 포털사이트 </a>
+			<ul>
+				<li> <a href="http://naver.com" title="네이버 바로가기"> 네이버 바로가기 </a></li>
+				<li> <a href="http://daum.net" title="다음 바로가기"> 다음 바로가기 </a></li>
+				<li> <a href="http://nate.com" title="네이트 바로가기"> 네이트 바로가기 </a></li>
+			</ul>
+		
+		</li>
+		<li> <a href="#"> 게임사이트 </a>
+			<ul>
+				<li> <a href="http://nexon.com" title="넥슨 바로가기"> 넥슨 바로가기 </a></li>
+				<li> <a href="http://pmang.com" title="피망 바로가기"> 피망 바로가기 </a></li>
+				<li> <a href="http://netmarble.net" title="넷마블 바로가기"> 넷마블 바로가기 </a></li>
+			</ul>
+		</li>
+		<li> <a href="#"> 언론사 </a> 
+			<ul> 
+				<li><a href ="http://news.naver.com"> 네이버 뉴스 </a> </li>
+				<li><a href ="http://media.daum.net"> 다음 뉴스 </a></li>
+				<li><a href ="http://news.nate.com"> 네이트뉴스 </a></li>
+			</ul>
+		</li>
+	</ul>
+
+</body>
+</html>
+
+<!--
+	멀티레벨을 만들 때 하위레벨은 무조건 상위레벨이 li요소에만 작성한다.
+	** 1레벨 완성 > 2레벨 완성 > 3레벨 완	
+-->

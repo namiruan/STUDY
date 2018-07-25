@@ -1,0 +1,101 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+	<style type="text/css">
+		/* 아이디 선택자 */
+		p#txt01{color:#f00;} /* p요소 중 txt01 아이디 이름을 갖고 있는 요소를 선택 */
+		#txt01 {color:#f00;} 
+		
+		/* 클래스 선택자 */
+		p.txt01 {color:#f0f;}
+		.txt02 {color:#0f0;}
+		
+		/* 클래스 다중 선택 */
+		.txt03 {color:#00f;}
+		.txt033 {font-size:30px; }
+		
+		/*예제*/
+		.color {font-size:11px; font-family:돋움; }
+		.down {color:#00f;}
+		.up {color:#f00;}
+	</style>
+<title> 아이디와 클래스 </title>
+</head>
+
+<body>
+	<h1> ID와 CLASS </h1>
+	<h2> id 선택자 </h2>
+	<p> 요소에 id속성을 생성하고, id이름을 부여</p>
+	<p> 선택자는 id이름을 사용하고 요소명#선택자 이름과 같이 사용(요소명 생략가능)</p>
+	<p> id선택자는 문서에서 오직 한번만 사용가능(id이름을 서로다른 요소에서 중복사용불가) </p>
+	<h3> 사용예제</h3>
+	<p id="txt01"> 아이디 선택자 테스트 </p>
+	<p id="txt01"> 아이디 선택자 중복사용 불가</p>
+	
+	<h2> class 선택자 </h2>
+	<p> 요소에 class 속성을 생성하고 class 이름을 부여한다 </p>
+	<p> 선택자는 class 이름을 사용하고 요소명.class 이름과 같이 사용한다 </p>
+	<p> class선택자는 서로 다른 요소에서 중복사용 가능하다 </p>
+	<p> class선택자는 하나의 class속성에 2개 이상의 class이름을 부여할 수 있다 </p>
+	
+	<h3> 사용예제 </h3>
+	<p class="txt01"> 클랙스 선택자 테스트 </p> <!--이름을 부르는 속성이 다르기 때문에 id와 똑같은 이름도 가능 -->
+	<p class="txt02"> 클랙스 선택자 테스트 </p>
+	<h4 class="txt02"> 클래스 선택자 중복 테스트 </h4>
+	
+	<h3> 사용예제2 - 다중클래스 </h3> <!--다중 이름은 4개 이상 쓸 수 있으나 4개정도로 쓴다.-->
+	<p class="txt03"> 다중 클래스 테스트 </p>
+	<p class="txt03 txt033"> 다중 클래스 테스트 </p>
+	
+	<h3> 예제 </h3>
+	
+	<div>
+		<h3>코스피</h3>
+		<p> 2264.97 <span class="down color"> 하락 4.34</span> </p>
+		<h3>코스닥</h3>
+		<p> 761.68 <span class="up color"> 등락 4.72</span> </p>
+	</div>
+	</body>
+</html>
+
+<!--
+	**ID
+		형식 => <tag id="idname">content</tag>
+		ex => <h1 id="pageTitle">title</h1>
+
+		선택자로 사용시 형식
+		요소명#idName
+		h1#pagetitle{속성:값;}
+		#pagetitle{속성:값;} => 요소며 생략
+
+	**CLASS
+		형식 => <tag class="className">content</tag>
+		ex => <h1 class="logo_tittle">title</h1>
+
+		선택자로 사용시 형식
+		요소명.className	
+		h1.logo_title{속성:값;}
+		.logo_title{속성:값;}
+
+		* 클래스와 아이디에서 #또는 .과 이름은 띄어쓰기 금지 *
+
+	** id와 class 네이밍 규칙 **
+		1) 영문자, 숫자, 특수문자(_,$) 만 사용 (한글안됨)
+		2) 첫글자로 숫자가 나올 수 없다.
+		3) 띄어쓰기 금지. 띄어 쓰고 싶은 경우 언더바를 사용(_)
+		4) 요소명 사용 금지
+		5) 의미없는 단어 사용 금지
+
+		=> 단어가 2단어 이상의 조합일 경우
+		border + bottom + color
+
+		1) camel(낙타봉) => 두번째 이후의 단어 첫글자를 무조건 대문자로 표기 => borderBottomColor
+		2) pascal(대문자) => 모든 단어의 첫글자를 대문자 => BorderBottomColor
+		3) undercore(_) => 단어와 단어사이를 연결 => border_bottom_color
+
+	** class Name 2개 이상 적용하기
+		<tag class="name1 name2 name3 name4">content</tag>
+		네임과 네임은 공백문자로 구분한다.
+
+-->
